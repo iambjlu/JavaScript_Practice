@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <title>JavaScript 練習</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<h2>JavaScript 練習</h2>
+
+<h3>電燈</h3>
+<img id="lightImg" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="電燈" width="50px" height="90px"/>
+<button onclick="document.getElementById('lightImg').src='https://www.w3schools.com/js/pic_bulbon.gif'">開燈</button>
+<button onclick="document.getElementById('lightImg').src='https://www.w3schools.com/js/pic_bulboff.gif'">關燈</button>
+
+<br><br>
+
+<h3>字體大小</h3>
+<p id="fontsize">JavaScript 可以改變字體大小</p>
+<button onclick="document.getElementById('fontsize').style.fontSize='35px'">放大</button>
+<button onclick="document.getElementById('fontsize').style.fontSize='14px'">縮小</button>
+
+<br><br>
+
+<h3>元素隱藏與顯示</h3>
+<p id="HideNSeek">這是一個跟你玩躲貓貓的元素</p>
+<button onclick="document.getElementById('HideNSeek').style.display='none'">躲起來</button>
+<button onclick="document.getElementById('HideNSeek').style.display='block'">跑出來</button>
+
+<br><br>
+
+<h3>Function、變數與計算</h3>
+Pizza的名字是<p id="pizzaName"> (內容已隱藏。無業配。) </p>
+<script>
+    let x,y; //let是2015以後的變數，const是2015以後的常數，var是2015以前的變數(對老舊瀏覽器比較友好)
+    x=8000; y=818; z=x+y;
+    function pizza() { document.getElementById("pizzaName").innerHTML = z ; }
+    function pizzaHide() { document.getElementById("pizzaName").innerHTML =" (內容已隱藏。無業配。) "; }
+</script>
+<button onclick="pizza()">顯示內容</button>
+<button onclick="pizzaHide()">隱藏內容</button>
+
+<br><br>
+
+<h3>直接寫出文字</h3>
+Say<script>document.write(" Hello");</script>
+
+<br><br>
+
+<h3>寫Log並顯示對話方塊</h3>
+<script>
+    function logNalert() {
+        console.log('這是一個 Log');
+        window.alert('已成功寫了個 Log 訊息，可以到瀏覽器 Console 看');
+    }
+</script>
+<button onclick="logNalert()">執行</button>
+
+<br><br>
+
+<h3>列印</h3>
+<button onclick="window.print()">列印這個網頁</button>
+
+<br><br>
+
+<h3>JavaScript 物件</h3>
+<p id="pidcar"></p>
+<script>
+    const car = {
+        type:"Type: Toyota",
+        model:"Model: 2022 Tacoma TRD PRO",
+        color:"Color: Lunar Rock" };
+    document.getElementById("pidcar").innerHTML = car.type + " , " + car.model + " , " + car.color;
+</script>
+<button onclick="document.getElementById('TacomaIMG').style.display='block'">顯示圖片</button>
+<button onclick="document.getElementById('TacomaIMG').style.display='none'">隱藏圖片</button>
+<br><br>
+<a href="https://i.imgur.com/gWk1cNR.jpeg" target="_blank">
+    <img id="TacomaIMG" src="https://i.imgur.com/gWk1cNR.jpeg" height="388px" width="582px" />
+</a>
+
+
+
+
+<!-- 每一行範本
+<br><br>
+
+<h3>列印</h3>
+<button onclick="window.print()">列印這個網頁</button>
+-->
+
+
+</body>
+</html>
