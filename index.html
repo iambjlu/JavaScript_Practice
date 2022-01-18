@@ -117,8 +117,9 @@ Say<script>document.write(" Hello");</script>
 <p id="hello_replace"></p>
 <script>
     let str_not_replaced = "Hello World";
-    let str_replaced = str_not_replaced.replace("Hello", "哈囉");
-    document.getElementById('hello_replace').innerText=str_replaced;
+    let str_ireplaced = str_not_replaced.replace(/HELLO/i,"哈囉"); //不區分大小寫
+    let str_replaced = str_not_replaced.replace("Hello", "哈囉"); //區分大小寫
+    document.getElementById('hello_replace').innerText=str_replaced+'\n'+str_ireplaced;
 </script>
 
 
