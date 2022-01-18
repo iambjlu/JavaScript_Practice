@@ -115,7 +115,7 @@ Say<script>document.write(" Hello");</script>
 <script>
     function fun_hello_replace() {
         let str_not_replaced = "Hello World";
-        let str_greplaced = str_not_replaced.replace("Hello",  "區分大小寫: 哈囉"); //區分大小寫，全部取代，未示範。
+        //let str_greplaced = str_not_replaced.replace("Hello",  "區分大小寫: 哈囉"); //區分大小寫，全部取代，未示範。
         let str_ireplaced = str_not_replaced.replace(/HELLO/i,"不區分大小寫: 哈囉"); //不區分大小寫
         let str_replaced = str_not_replaced.replace("Hello",  "區分大小寫: 哈囉"); //區分大小寫
         document.getElementById('hello_replace').innerText=str_replaced+'\n'+str_ireplaced;
@@ -130,8 +130,7 @@ Say<script>document.write(" Hello");</script>
 <script>
     function fun_hello_uppper() {
         let str_not_upper = "Hello World";
-        let str_upper = str_not_upper.toUpperCase()
-        document.getElementById('hello_upper').innerText=str_upper;
+        document.getElementById('hello_upper').innerText=str_not_upper.toUpperCase();
     }</script>
 
 <br><br>
@@ -143,8 +142,7 @@ Say<script>document.write(" Hello");</script>
 <script>
     function fun_hello_lower() {
         let str_not_lower = "Hello World";
-        let str_lower = str_not_lower.toLowerCase()
-        document.getElementById('hello_lower').innerText=str_lower;
+        document.getElementById('hello_lower').innerText=str_not_lower.toLowerCase();
     }</script>
 
 
