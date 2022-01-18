@@ -107,7 +107,7 @@ Say<script>document.write(" Hello");</script>
 <script>
     let fruit_str = "Apple, Banana, Kiwi";
     let banana = fruit_str.substring(7, 13);
-    document.getElementById('str_substring').innerText='第7~13個字是香蕉 ('+banana+')';
+    document.getElementById('str_substring').innerText=fruit_str+'\n第7~13個字是香蕉 ('+ banana +')';
 </script>
 
 
@@ -116,6 +116,7 @@ Say<script>document.write(" Hello");</script>
 <h3>替換字串</h3>
 <p id="hello_replace">Hello World</p>
 <button onclick="replace()">開始替換字串</button>
+<button onclick="document.getElementById('hello_replace').innerText='Hello World'">復原替換字串</button>
 <script>
     function replace() {
         let str_not_replaced = "Hello World";
