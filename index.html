@@ -100,6 +100,16 @@ Say<script>document.write(" Hello");</script>
 <h3>列印</h3>
 <button onclick="window.print()">列印這個網頁</button>
 
+<br><br>
+
+<h3>擷取部分的字</h3>
+<p id="str_substring"></p>
+<script>
+    let str = "Apple, Banana, Kiwi";
+    let banana = str.substring(7, 13);
+    document.getElementById('str_substring').innerText='第7~13個字是香蕉 ('+banana+')';
+</script>
+
 <!-- 每一行範本
 <br><br>
 
