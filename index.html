@@ -115,10 +115,10 @@ Say<script>document.write(" Hello");</script>
 
 <h3>替換字串</h3>
 <p id="hello_replace">Hello World</p>
-<button onclick="replace()">開始替換字串</button>
+<button onclick="fun_hello_replace()">開始替換字串</button>
 <button onclick="document.getElementById('hello_replace').innerText='Hello World'">復原替換字串</button>
 <script>
-    function replace() {
+    function fun_hello_replace() {
         let str_not_replaced = "Hello World";
         let str_ireplaced = str_not_replaced.replace(/HELLO/i,"不區分大小寫: 哈囉"); //不區分大小寫
         let str_replaced = str_not_replaced.replace("Hello",  "區分大小寫: 哈囉"); //區分大小寫
