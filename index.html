@@ -84,8 +84,8 @@ Say<script>document.write(" Hello");</script>
 <h3>A~Z的字母數量</h3>
 <p id="a2z"></p>
 <script>
-    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let a2z_length = text.length;
+    let a2z_a2z = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let a2z_length = a2z.length;
     document.getElementById('a2z').innerText='A~Z有'+a2z_length+'個字母';
 </script>
 
@@ -105,10 +105,22 @@ Say<script>document.write(" Hello");</script>
 <h3>擷取部分的字</h3>
 <p id="str_substring"></p>
 <script>
-    let str = "Apple, Banana, Kiwi";
-    let banana = str.substring(7, 13);
+    let fruit_str = "Apple, Banana, Kiwi";
+    let banana = fruit_str.substring(7, 13);
     document.getElementById('str_substring').innerText='第7~13個字是香蕉 ('+banana+')';
 </script>
+
+
+<br><br>
+
+<h3>替換字串</h3>
+<p id="hello_replace"></p>
+<script>
+    let str_not_replaced = "Hello World";
+    let str_replaced = str_not_replaced.replace("World", "世界");
+    document.getElementById('hello_replace').innerText=str_replaced;
+</script>
+
 
 <!-- 每一行範本
 <br><br>
