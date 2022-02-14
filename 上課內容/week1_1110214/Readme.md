@@ -1,1 +1,7 @@
-<img src="https://github.com/iambjlu/JavaScript_Practice/blob/master/%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/week1_1110214/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202022-02-14%20%E4%B8%8A%E5%8D%8811.57.37.png?raw=true"></img>
+點圖可放大
+
+  <a href="https://github.com/iambjlu/JavaScript_Practice/blob/master/%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/week1_1110214/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202022-02-14%20%E4%B8%8A%E5%8D%8811.57.37.png?raw=true" target="_blank">
+
+  <img src="https://github.com/iambjlu/JavaScript_Practice/blob/master/%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9/week1_1110214/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202022-02-14%20%E4%B8%8A%E5%8D%8811.57.37.png?raw=true">
+  
+  </img></a>
