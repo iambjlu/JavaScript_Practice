@@ -8,8 +8,6 @@
 開發工具: <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a><br>
 參考資料: <a href="https://www.w3schools.com/js/default.asp">w3schools</a><br>
 
-<hr>
-
 # 螢幕快照<br>
 不會常常更新
 <h3>網頁螢幕快照:</h3>
