@@ -4,7 +4,7 @@
 
 <hr>
 
-從無到有練習 JavaScript 的過程<br>
+以下內容則是從無到有練習 JavaScript 的過程<br>
 開發工具: <a href="https://www.jetbrains.com/webstorm/">JetBrains WebStorm</a><br>
 參考資料: <a href="https://www.w3schools.com/js/default.asp">w3schools</a><br>
 
