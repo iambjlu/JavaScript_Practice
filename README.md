@@ -1,6 +1,6 @@
 # JavaScript 練習
 
-<h3><a href="https://github.com/iambjlu/JavaScript_Practice/tree/master/%E4%B8%8A%E8%AA%B2%E5%85%A7%E5%AE%B9">上課練習</a></h3>
+<h3><a href="https://github.com/iambjlu/JavaScript_Practice/tree/master/Class">上課練習點此前往</a></h3>
 
 <hr>
 
