@@ -7,11 +7,13 @@
     <!--
         style定義各樣式 [連結的四種狀態必考]
 
-        a:link=連結，padding是內距(上右下左)
+        a:link=連結，padding是內距(一個數字=上下左右，兩個數字=上下/左右，三個數字=上/下/左右，四個數字=上右下左)
         a:visited=戳過的連結
         a:hover=滑鼠飄過連結
         a:active=戳下連結那一瞬間
-        tr=列,td=格，下方border邊框樣式可以縮寫為  border:1px solid black
+        table=表格
+        tr=列,td=格，下方border邊框樣式可以縮寫為 border:1px solid ， th:nth-child(even)可以定義偶數列的樣式 ，th:nth-child(odd)則是奇數
+
     -->
     <style>
         p {
@@ -43,7 +45,13 @@
             padding: 15px 25px 0px 0px;
         }
 
-        table, tr, td {
+        table{
+            border-width: 1px;
+            border-style: dashed;
+            border-color: black;
+        }
+
+        tr, td {
             border-width: 1px;
             border-style: solid;
             border-color: black;
