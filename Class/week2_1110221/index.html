@@ -4,6 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width",initial-scale="1.0">
+    <!--
+        style定義各樣式 [連結的四種狀態必考]
+
+        a:link=連結，padding是內距(上右下左)
+        a:visited=戳過的連結
+        a:hover=滑鼠飄過連結
+        a:active=戳下連結那一瞬間
+        tr=列,td=格，下方border邊框樣式可以縮寫為  border:1px solid black
+    -->
+    <style>
+        p {
+            color: red;
+            background-color: yellow;
+        }
+
+        a:link {
+            background-color: #8aa294;
+            color: #22391f;
+            padding: 15px 15px 0px 0px;
+        }
+
+        a:visited {
+            background-color: #22391f;
+            color: #8aa294;
+            padding: 15px 15px 0px 0px;
+        }
+
+        a:hover {
+            background-color: black;
+            color: white;
+            padding: 15px 25px 0px 0px;
+        }
+
+        a:active {
+            background-color: #22391f;
+            color: #8aa294;
+            padding: 15px 25px 0px 0px;
+        }
+
+        table, tr, td {
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
+        }
+    </style>
     <title>我的第一個網頁</title> <!--網頁標題-->
 </head>
 
@@ -13,10 +58,12 @@
     <h2 style="color:gold">Heading 2</h2> <!--h2文字標題，設為金色-->
     <h3>Heading 3</h3> <!--h3文字標題-->
     <h4>Heading 4</h4> <!--h4文字標題，設為藍色與等寬字型-->
-    <p title="課程內容" style="color:blue ; font-family:monospace">本門課程包含html，CSS與JavaScript三部分</p>
+    <p>HTML很簡單</p>
+    <a href="http://www.stust.edu.tw" target="_blank">南台科技大學</a> <!--絕對路徑Link連結，在新分頁開啟--><br>
+    <a href="about.html">關於我</a> <!--相對路徑Link連結-->
+    <p title="課程內容" style="color:green ; font-family:monospace">本門課程包含html，CSS與JavaScript三部分</p>
 
     <br/> <!--換行-->
-    <a href="http://www.stust.edu.tw">南台科技大學</a> <!--Link連結-->
     <br><img src="https://www.stust.edu.tw/tc/images/stust-logo_m.png" alt="STUST logo" /> <!--圖片-->
 
     <!--段落，有設置標題(游標懸停文字)與套用200%字體大小、置中-->
