@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width",initial-scale="1.0">
+    <meta name="viewport" content="width=device-width">
     <!--
         style定義各樣式 [連結的四種狀態必考]
 
@@ -16,45 +16,22 @@
 
     -->
     <style>
-        p {
-            color: red;
-            background-color: yellow;
-        }
-
-        a:link {
-            background-color: #8aa294;
-            color: #22391f;
-            padding: 15px 15px 0px 0px;
-        }
-
-        a:visited {
-            background-color: #22391f;
-            color: #8aa294;
-            padding: 15px 15px 0px 0px;
-        }
-
-        a:hover {
-            background-color: black;
-            color: white;
-            padding: 15px 25px 0px 0px;
-        }
-
-        a:active {
-            background-color: #22391f;
-            color: #8aa294;
-            padding: 15px 25px 0px 0px;
-        }
-
         table{
-            border-width: 1px;
-            border-style: dashed;
-            border-color: black;
+            font-family: Bahnschrift, "PingFang TC", sans-serif;
+            border-collapse: collapse;
+            width: 100%;
         }
-
-        tr, td {
-            border-width: 1px;
-            border-style: solid;
-            border-color: black;
+        th{
+            border:1px solid #dddddd;
+            text-align:center;
+            padding:8px;
+        }
+        td{
+            color:blue;
+            border:1px solid #dddddd;
+        }
+        ul{
+            list-style: disc;
         }
     </style>
     <title>我的第一個網頁</title> <!--網頁標題-->
@@ -67,23 +44,23 @@
     <h3>Heading 3</h3> <!--h3文字標題-->
     <h4>Heading 4</h4> <!--h4文字標題，設為藍色與等寬字型-->
     <p>HTML很簡單</p>
-    <a href="http://www.stust.edu.tw" target="_blank">南台科技大學</a> <!--絕對路徑Link連結，在新分頁開啟--><br>
+    <p title="課程內容" style="color:green;font-family:monospace">本門課程包含html，CSS與JavaScript三部分</p> <!--paragraph段落文字加顏色字體-->
+    <br />
+    <a href="http://www.stust.edu.tw" target="_blank">南台科技大學</a> <!--絕對路徑Link連結，在新分頁開啟-->
+    <br />
     <a href="about.html">關於我</a> <!--相對路徑Link連結-->
-    <p title="課程內容" style="color:green ; font-family:monospace">本門課程包含html，CSS與JavaScript三部分</p>
-
     <br/> <!--換行-->
-    <br><img src="https://www.stust.edu.tw/tc/images/stust-logo_m.png" alt="STUST logo" style="height:46px;width:320px;float:right"/>
     <!--圖片，以alt宣告懸停文字，style樣式宣告長寬以及漂浮在右邊，也可以用 [height="46" width="320"] (不含括號)來宣告長寬-->
+    <img src="https://www.stust.edu.tw/tc/images/stust-logo_m.png" alt="STUST logo" style="height:46px;width:320px;float:right"/>
 
     <!--段落，有設置標題(游標懸停文字)與套用200%字體大小、置中-->
-
-    <p style="font-size: 200%; text-align: center">本門課程評分標準如下:</p>  <!--段落-->
-    <ul> <!--Unordered List 清單-->
+    <p style="background-color:#d4c2af ; color:#81363a ; font-size: 200%; text-align: center">本門課程評分標準如下:</p>  <!--段落-->
+    <ul> <!--Unordered List(ul)清單有點點符號 (另一種Ordered List(ol)清單則會有數字符號)-->
         <li>平時作業</li> <!--清單項-->
         <li>期中筆試</li> <!--清單項-->
         <li>期末上機考試</li> <!--清單項-->
     </ul>
-    <br><hr width="50%"> <!--水平分隔線，寬度75%-->
+    <br><hr width="50%"> <!--水平分隔線，寬度50%-->
     <pre>
         This paragraph
         contains a lot of lines
@@ -91,22 +68,22 @@
         but the browser
         ignores it.
     </pre><!--pre標籤會原汁原味的呈現輸入的內容，保留如空格或換行等內容-->
-
-    <table><!--table表格caption colspan rowspan-->
+    <table style="width:50%"><!--table表格，caption=替代文字，colspan=橫向合併儲存格，rowspan=直向合併儲存格，style宣告寬度-->
         <tr><!--table row的意思，橫排-->
-            <th>Company</th><!--table header的意思，標題橫排裡面的小格子-->
-            <th>Contact</th>
-            <th>Country</th>
+            <th colspan="3">表格範例</th><!--table header的意思，標題橫排裡面的小格子-->
         </tr>
         <tr>
-            <td>Alfreds Futterkiste</td><!--table data的意思，橫排裡面的小格子-->
-            <td>Maria Anders</td>
-            <td>Germany</td>
+            <td>科目</td><!--table data的意思，橫排裡面的小格子-->
+            <td>JavaScript</td>
+            <td>C++</td>
         </tr>
         <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
+            <td rowspan="2">成績/排名</td><!--table data的意思，橫排裡面的小格子-->
+            <td>85</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td colspan="2">2</td>
         </tr>
     </table>
 
