@@ -19,15 +19,15 @@
         let input = document.getElementById('name')
         let n = parseInt(input.value);
         let s = '<table>'
-        for (i = 1 ; i<=n ; i++){
-          s+='<tr>';
-          for (j=1;j<=n;j++){
-            s += '<td>${i} * ${j} = ${i*j}</td>'
-          }
-          s+='</tr>';
+        for (i = 1 ; i<=n ; i++) {
+            s += '<tr>';
+            for (j = 1; j <= n; j++) {
+                s += `<td>${i} * ${j} = ${i*j}</td>`
+            }
+            s += '</tr>';
+        }
           s+='</table>';
           document.getElementById('myId').innerHTML = s;
-        }
       }
     </script>
 </head>
