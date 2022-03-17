@@ -1,0 +1,29 @@
+<!DOCTYPE html>  <!--註: 老師推薦使用 VSCode 編輯工具，此文件為自行用 WebStorm 手工敲打並做些許優化修改，如有遺漏敬請見諒並提醒修正，感恩-->
+<html lang="zh-tw" >  <!--語系，這會影響翻譯工具作動-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        h1 {
+            color: blue;
+            background-color:antiquewhite;
+        }
+    </style>
+    <title>我的第一個JavaScript檔案</title> <!--網頁標題-->
+    <script>
+        function myFunction(){
+            var x, y, s;
+            s = "myFunction Clicked"
+            x = 5+6;
+            y = x*10;
+            document.getElementById('myId').innerHTML = s;
+        }</script>
+</head>
+
+<body>
+    <h1>Hello JavaScript !!!</h1>
+    <Button onclick="myFunction()";>點擊</Button>
+    <div id="myId"></div>
+</body>
+</html>
