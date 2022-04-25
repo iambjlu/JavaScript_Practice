@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -22,23 +23,23 @@
                 let n = parseInt($("input").val());
                 if (n>=85){
                     grade = "A";
-                    $("#myId").html(This number is ${n}, grade is ${grade}).removeClass().addClass("A");
+                    $("#myId").html(`This number is ${n}, grade is ${grade}`).removeClass().addClass("A");
                 }
                 else if (n>=70){
                     grade = "B";
-                    $("#myId").html(This number is ${n}, grade is ${grade}).removeClass().addClass("B");
+                    $("#myId").html(`This number is ${n}, grade is ${grade}`).removeClass().addClass("B");
                 }
                 else if (n>=60){
                     grade = "C";
-                    $("#myId").html(This number is ${n}, grade is ${grade}).css("color","green");
+                    $("#myId").html(`This number is ${n}, grade is ${grade}`).css("color","green");
                 }
                 else if (n>=50){
                     grade = "D";
-                    $("#myId").html(This number is ${n}, grade is ${grade}).css("color","black");
+                    $("#myId").html(`This number is ${n}, grade is ${grade}`).css("color","black");
                 }
                 else{
                     grade = "E";
-                    $("#myId").html(This number is ${n}, grade is ${grade}).css("color","gray");
+                    $("#myId").html(`This number is ${n}, grade is ${grade}`).css("color","gray");
                 }
             });
         });
