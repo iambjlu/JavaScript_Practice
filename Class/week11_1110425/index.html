@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .A{
+            color: black;
+            border: 1px solid black;
+            padding: 5px;
+        }
+        .B{
+            color: red;
+            border: 1px solid red;
+            padding: 5px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myId").html("Hello Jquery");
+            $("button").click(function () {
+                let n = parseInt($("input").val());
+                if (n>=85){
+                    grade = "A";
+                    $("#myId").html(This number is ${n}, grade is ${grade}).removeClass().addClass("A");
+                }
+                else if (n>=70){
+                    grade = "B";
+                    $("#myId").html(This number is ${n}, grade is ${grade}).removeClass().addClass("B");
+                }
+                else if (n>=60){
+                    grade = "C";
+                    $("#myId").html(This number is ${n}, grade is ${grade}).css("color","green");
+                }
+                else if (n>=50){
+                    grade = "D";
+                    $("#myId").html(This number is ${n}, grade is ${grade}).css("color","black");
+                }
+                else{
+                    grade = "E";
+                    $("#myId").html(This number is ${n}, grade is ${grade}).css("color","gray");
+                }
+            });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body onload="myFunction()">
+<input type="text" id="myInput" value="some text">
+<button type="button">Click Me!</button>
+<div id="myId"></div>
+</body>
+</html>
