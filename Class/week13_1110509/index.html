@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <title>2022拼圖遊戲</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    var hiddenId;
+    var size = 0;
+    var totalMoves = 0;
+    $(document).ready(function(){
+      $("button").click(function(){
+        //window.alert(`拼圖尺寸: ${$"#size").val()}`);
+        totalMoves = 0 ;
+        size = parseInt($("#size").val());
+        setPuzzleBoard(size);
+        shuffle();
+      });
+
+      $(document).on('click','.puzzleCell', function(){
+        let cellId = $(this).index();
+        //$("message").text(`選取到第${cellId}個格子`);
+        if ((cellId - 1 == hiddenId && cellId %size !=0)||
+             (cellId+1==hiddenId&&cellId%size!=size-1)||
+             (cellId-size==hiddenId)||
+             (cellId+size==hiddenId)){
+             swapCell(hiddenId, cellId);
+             totalMoves++;
+        }
+        testComplete(); //測試是否完成貼圖
+        $("#message").text(`總共移動了 ${totalMoves}`);
+      });
+
+      function setPuzzleBoard(n){
+        //window.alert("debug")
+        $("#puzzleBoard").empty();
+        $("#puzzleBoard").removeClass("complete");
+        $("#puzzleBoard").addClass("puzzleBoard").css("width",6+n*55+"px").css("height",6+n*55+"px");
+        $("#replay").css("visibility","hidden");
+        let divNum = 0;
+        for (let i=0;)
+      }
+
+    });
+  </script>
+</head>
+<body>
+
+</body>
+</html>
