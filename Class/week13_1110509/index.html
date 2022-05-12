@@ -38,7 +38,53 @@
         $("#puzzleBoard").addClass("puzzleBoard").css("width",6+n*55+"px").css("height",6+n*55+"px");
         $("#replay").css("visibility","hidden");
         let divNum = 0;
-        for (let i=0;)
+        for (let i=0; i<n ; i++){
+          for(let j=0; j<n ; j++){
+            //divNode = document.createElement("div")
+            divNode = $("<div></div>").text(divNum).attr("id", `div${divNum}`).appendTo("#puzzleBoard");
+            divNode.addClass("puzzleCell").css("left", `div${divNum}`).appendTo("#puzzleBoard");
+            if(divNum == n*n-1){
+              divNode.css("visibillity", "hidden");
+              hiddenId=divNum;
+            }
+            divNum++;
+          }
+        }
+      }
+
+      function shuffle(){
+        let SHUFFLE_NUM = 1000;
+        let shuffleId;
+
+        for (let i = 1; i<=SHUFFLE_NUM; i++){
+          //generate a random number between 0 and 1
+          let r = Math.random();
+
+          switch (true){
+            case r <0.25: //shuffle left
+                  if(hiddenId % size!=0) shuffleId = hiddenId-1;
+                  break;
+            case r < 0.5: //shuffle right
+                  if (hiddenId % size!= size-1) shuffleId = hiddenId+1;
+                  break;
+            case r <0.75: //shuffle up
+                  if (hiddenId / size != 0) shuffleId = hiddenId - size;
+                  break;
+            default:
+                  if (hiddenId / size != (size-1)) shuffleId = hiddenId + size;
+          }
+
+          if (shuffleId >= 0 && shuffleId <= size*size-1){
+            swapCell(hiddenId, shuffleId);
+          }
+        }
+      }
+
+      function swapCell(srcId, dstId){
+        let srcNode = $("#puzzleBoard").children().eq(srcId);
+        let dstNode = $("#puzzleBoard").children().eq(dstId);
+
+        let
       }
 
     });
