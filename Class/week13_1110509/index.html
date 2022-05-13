@@ -84,7 +84,13 @@
         let srcNode = $("#puzzleBoard").children().eq(srcId);
         let dstNode = $("#puzzleBoard").children().eq(dstId);
 
-        let
+        let srcLabel = srcNode.text();
+        let dstLabel = dstNode.text();
+
+        if(dstNode.css("visibility") == "visible"){
+          srcNode.css("visibility","visible").text(dstLabel);
+          dstNode.css("visibility","hidden").text (srcLabel)
+        }
       }
 
     });
