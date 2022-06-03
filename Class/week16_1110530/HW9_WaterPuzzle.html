@@ -100,8 +100,31 @@
             }else{
                 dst = index;
                 console.log(`已經選擇試管:${tubeIsSelected}，來源試管${src}，目標試管${dst}`);
+                if (tubeIsSelected) pourWater();
             }
 
+
+        }
+
+        function pourWater(){
+            console.log(`來源試管${src}，目標試管${dst}`)
+            //倒水的條件：
+            //1.如果目標試管已滿，顯示無法倒水
+            //2.否則執行以下倒水過程
+            //  2.1判斷來源試管最上層的水是否同一個顏色，如果是就倒水
+            //3.判斷來源試管還有水可倒，持續回到步驟2.1
+
+            let src_color, dst_color;
+            let src_count = tubes[src].children().length;
+            let dst_count = tubes[src].children().length;
+            let IsDstTubeFull = dst_count ==4 ? true : false;
+
+            if (isDstTubeFull) console.log('目標試管已滿，無法倒水');
+            else{
+                while (src_count>0 && !isDstTubeFull){
+                    src_color = tubes[src].children().length;
+                }
+            }
         }
 
     </script>
