@@ -2,7 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Jquery Water Sort Puzzle</title>
+    <script src="https://ajax.googleapis.com/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var container
+        var tubes = new Array();
+        var src, dst;
+        var tubsIsSelected;
+        var complete;
+        var colors = ["DodgerBlue","SeaGreen","Aqua","Tomato","Sienna","SandyBrown","BlueViolet","Olive","Yellow","Red","SlateBlue","Pink"];
+
+        $(document).ready(function(){
+            $("#playButton").click(function(){
+                tubeIsSelected = false
+                complete = 0;
+                $("#result").text(``);
+                init();
+            })
+        })
+
+
+        function init(){
+            container = $("#container");
+            container.empty();
+
+            let tube_num = parseInt($("#tube_num").val());
+            for (let i = 0; i < tube_num; i++){
+                let newTube = $('<div></div>');
+                newTube.addClass('tube').data('index',i);
+                tubes.push(newTube);
+                container.append(newTube);
+            }
+
+            for(let i = 0; i<tubes.length -2 ; i++){
+                for (let j=0;j<4;j++){
+                    let water = $('<div></div>');
+                    water.addClass('water');
+                    if(j==0) water.addClass('water';
+                    water.css('background-color', colors[i]).css('text-align', 'center');
+                    tubes[i].append(water);
+                }
+            }
+
+            shuffle();
+
+
+
+            //對於每一個試管加入click操作
+            //window.alert('請點擊試管')
+            for (let i=0;i<tubes.length;i++){
+                $('tube').on('click',play);
+            }
+
+        }
+
+        function shuffle(){
+
+        }
+
+
+    </script>
 </head>
 <body>
 
