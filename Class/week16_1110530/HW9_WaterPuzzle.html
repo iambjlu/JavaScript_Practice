@@ -57,9 +57,52 @@
         }
 
         function shuffle(){
+            let n = tubes.length-2;
+            let src_tube, dst_tube, src_water, dst_water;
+            let shuffle_num = 1000;
+            for (let i= 0; i<shuffle_num; i++){
+                src_tube = Math.floor(Math.random()*n);
+                do{
+                    dst_tube = Math.floor(Math.random()*n);
+                    if(src_tube != dst_tube) break;
+                }
+                while (true);
 
+                src_water = Math.floor(Math.random()*4);
+                dst_water = Math.floor(Math.random()*4);
+
+                let src_color = tubes[src_tube].children().eq(src_water).css('background-color');
+                let dst_color = tubes[dst_tube].children().eq(dst_water).css('background-color');
+                tubes[src_tube].children().eq(src_water).css('background-color', dst_color);
+                tubes[dst_tube].children().eq(dst_water).css('background-color', src_color);
+            }
         }
 
+        function play(){
+            let index = $(this).data('index');
+            let isTubeEmpty = $(this).children().length ==0 ? true:false;
+            //console.log(`index:${index}`);
+
+            //試管可以被選取來到水的條件：
+            //1. 來源試管不可以是空的
+            //2.來源試管只選擇了一次
+            //3.目標試管是空的，獲釋目標是管最上層的水與來源試管最上層的水同一個顏色
+
+            //變數說明：
+            //isTubeNotEmpty:來源是管是否為空
+            //tubeIsSelected:來源試管是否被選取過
+
+            if(!isTubeEmpty&&(!tubeIsSelected||$(this).hasClass('tube_selected'))){
+                $(this).toggleClass('tube_selected');
+                src = index;
+                tubeIsSelected = !tubeIsSelected;
+                console.log(`已經選擇試管:${tubeIsSelected}，來源試管${src}，目標試管${dst}`);
+            }else{
+                dst = index;
+                console.log(`已經選擇試管:${tubeIsSelected}，來源試管${src}，目標試管${dst}`);
+            }
+
+        }
 
     </script>
 </head>
